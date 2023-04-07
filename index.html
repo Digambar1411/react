@@ -11,6 +11,13 @@
 			<h2>heading 2</h2>
 		</div>
 
+            <script>
+			const h1 = document.createElement("h1");
+			h1.innerText = "Heading 1";
+			const root = document.getElementById("root");
+			root.appendChild(h1);
+		</script>
+
 		<script
 			crossorigin
 			src="https://unpkg.com/react@18/umd/react.development.js"
@@ -21,17 +28,18 @@
 			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
 		></script>
 
+          
+
 		<script>
-			const p = React.createElement("p", {}, "Thi is paragraph");
+			const p = React.createElement("p", {
+                        id:"react-element",
+                        class:'p',
+                        style:{color:"red",fontSize:"3rem"}
+                  }, "This is paragraph");
 			const root1 = ReactDOM.createRoot(document.getElementById("root"));
 			root1.render(p);
 		</script>
 
-		<script>
-			const h1 = document.createElement("h1");
-			h1.innerText = "Heading 1";
-			const root = document.getElementById("root");
-			root.appendChild(h1);
-		</script>
+		
 	</body>
 </html>
